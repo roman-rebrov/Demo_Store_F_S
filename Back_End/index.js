@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended : true}))
 app.use(express.static('public'))
 app.use(express.json({ limit : '1mb' }))
 app.use(cors({
-    origin :  'http://127.0.0.1:5501'
+    origin :  '*' // 'http://127.0.0.1:5501'
 }))
 // 
 app.get('/', cors(), (req, res) => {
